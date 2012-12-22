@@ -1,5 +1,4 @@
-require "special_delivery/version"
+require "bundler"
+require "geminabox"
 
-module SpecialDelivery
-  # Your code goes here...
-end
+require "special_delivery/version"

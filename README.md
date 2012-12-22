@@ -1,24 +1,42 @@
-# SpecialDelivery
+# Special Delivery
 
-TODO: Write a gem description
+Special Delivery allows you to use Bundler's rake commands to release gems to your geminabox server. It is heavily inspired by Josh Krueger's [bundler_geminabox](https://github.com/joshkrueger/bundler_geminabox) gem.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Crack open your gemspec and add `special_delivery` as a development dependency:
 
-    gem 'special_delivery'
+```Ruby
+Gem::Specification.new do |gem|
+  # ...
+  gem.add_development_dependency 'special_delivery'
+
+end
+```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+In your gem's Rakefile, replace Bundler's gem tasks with Special Delivery's:
 
-    $ gem install special_delivery
+```ruby
+require "bundler/gem_tasks"
+```
+
+becomes
+
+```ruby
+require "special_delivery/gem_tasks"
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Use Special Delivery to release gems just like you would with Bundler:
+
+    $ rake release
+
+The latest version of your gem will be tagged, built and pushed to your geminabox server.
 
 ## Contributing
 

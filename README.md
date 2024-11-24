@@ -1,3 +1,5 @@
+> **DEPRECATED:** RubyGems now supports publishing to your own server [natively](https://guides.rubygems.org/publishing/#serving-your-own-gems).
+
 # Special Delivery
 
 Special Delivery allows you to use Bundler's rake commands to release gems to your geminabox server. It is heavily inspired by Josh Krueger's [bundler_geminabox](https://github.com/joshkrueger/bundler_geminabox) gem.
